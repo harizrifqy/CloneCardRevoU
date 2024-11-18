@@ -1,0 +1,156 @@
+body {
+    font-family: "Rosa Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Tambahkan untuk memusatkan konten */
+    min-height: 100vh;
+    margin: 0; /* Pastikan margin default dihilangkan */
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Biarkan wrapping terjadi jika layar kecil */
+    max-width: 1200px; /* Tetapkan lebar maksimal untuk layar besar */
+    margin: 0 auto;
+}
+
+.content-pricing{
+    background-color: #fedf3d;
+    max-width: 420px; /* Batas maksimal ukuran card */
+    flex: 1; /* Tambahkan untuk membuat card berbagi ruang */
+    max-width: 420px;
+    padding: 24px; /* Konsisten untuk semua card */
+    margin: 16px; /* Konsisten margin antar card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    border-radius: 24px;
+}
+
+.title-content {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding: 0;
+    color: #1f2756;
+}
+
+.title-content span {
+    text-transform: uppercase;
+}
+
+.title-program {
+    font-size: 15px;
+    color: #000000b3;
+}
+
+.program {
+    font-size: 15px;
+    margin-top: 3px;
+    color: #000000b3;
+    line-height: 1.4;
+}
+
+.program span {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.btn-order,
+.btn-full-course,
+.btn-course-gratis {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    padding: 12px 32px; /* Konsisten untuk semua tombol */
+    border-radius: 40px;
+    display: block; /* Menjadikan tombol elemen blok */
+    border: none;
+    margin: 10px auto; /* Pusatkan tombol */
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%; /* Seragam untuk semua tombol */
+    max-width: 280px; /* Batas maksimal ukuran tombol */
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
+}
+
+.btn-order:hover,
+.btn-full-course:hover,
+.btn-course-gratis:hover {
+    background-color: rgb(78, 75, 75); /* Efek hover konsisten */
+}
+
+/* card kedua belajar flexbox */
+
+.card-program{
+    display: flex; /* Untuk memastikan konten tombol seragam */
+    background-color: #fedf3d;
+    max-width: 420px; /* Batas maksimal ukuran card */
+    flex: 1; /* Tambahkan untuk membuat card berbagi ruang */
+    position: relative;
+    padding: 24px; /* Konsisten untuk semua card */
+    margin: 16px; /* Konsisten margin antar card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    border-radius: 24px;
+}
+
+.content-program {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content{
+    font-size: 16px;
+}
+
+.card-thumbnail_image {
+    position: absolute;
+    top: -30px; /* Sesuaikan dengan ukuran gambar */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px; /* Sesuaikan dengan kebutuhan */
+    background: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* MEDIA QUERY UNTUK RESPONSIVITAS */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap; /* Biarkan elemen wrap */
+    }
+
+    .content-pricing,
+    .card-program {
+        max-width: 90%; /* Gunakan 90% lebar layar */
+        margin: 16px auto; /* Pusatkan card */
+    }
+
+    .btn-order,
+    .btn-full-course,
+    .btn-course-gratis {
+        padding: 10px 20px; /* Kurangi padding untuk layar kecil */
+        max-width: 100%; /* Tombol memenuhi lebar container */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Tambahkan padding untuk layar kecil */
+    }
+
+    .content-pricing,
+    .card-program {
+        max-width: 100%; /* Card memenuhi layar */
+        margin: 16px auto; /* Pusatkan dengan margin */
+    }
+
+    .btn-order,
+    .btn-full-course,
+    .btn-course-gratis {
+        padding: 8px 16px; /* Sesuaikan padding */
+    }
+}
+
